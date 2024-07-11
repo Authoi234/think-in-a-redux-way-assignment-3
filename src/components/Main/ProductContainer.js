@@ -5,10 +5,9 @@ import { useSelector } from 'react-redux';
 
 const ProductContainer = () => {
     const products = useSelector((state) => state.products.products);
-    console.log(products)
     return (
         <div className="productContainer" id="lws-productContainer">
-            {products.map((product, i) => <Product key={i}></Product>)}
+            {products.map((product, i) => <Product key={i} product={product}></Product>)}
         </div>
     );
 };

@@ -13,7 +13,7 @@ const FormContainer = () => {
         const name = form.name.value;
         const category = form.category.value;
         const image = form.image.value;
-        const quantity = form.quantity.value;
+        const quantity = Number(form.quantity.value);
         const price = form.price.value;
         
         dispatch(addProduct({name, category, image, quantity, price, id:0}))
@@ -38,11 +38,11 @@ const FormContainer = () => {
                 <div className="grid grid-cols-2 gap-8 pb-4">
                     <div className="space-y-2">
                         <label htmlFor="ws-inputPrice">Price</label>
-                        <input className="addProductInput" type="number" id="lws-inputPrice" name='quantity' required />
+                        <input className="addProductInput" type="number" id="lws-inputPrice" name='price' required />
                     </div>
                     <div className="space-y-2">
                         <label htmlFor="lws-inputQuantity">Quantity</label>
-                        <input className="addProductInput" type="number" id="lws-inputQuantity" name='price' required />
+                        <input className="addProductInput" type="number" id="lws-inputQuantity" name='quantity' required />
                     </div>
                 </div>
                 <button type="submit" id="lws-inputSubmit" className="submit">Add Product</button>
