@@ -5,11 +5,18 @@ import { useSelector } from 'react-redux';
 
 const ProductContainer = () => {
     const products = useSelector((state) => state.products.products);
-    return (
-        <div className="productContainer" id="lws-productContainer">
-            {products.map((product, i) => <Product key={i} product={product}></Product>)}
-        </div>
-    );
+
+    if (products.length) {
+        return (
+            <div className="productContainer" id="lws-productContainer">
+                {products.map((product, i) => <Product key={i} product={product}></Product>)}
+            </div>
+        );
+    }
+    else{
+        return <h1 className='text-lg'>No Products Found</h1>
+    }
+
 };
 
 export default ProductContainer;

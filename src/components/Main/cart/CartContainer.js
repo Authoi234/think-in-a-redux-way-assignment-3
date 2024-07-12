@@ -9,7 +9,7 @@ const CartContainer = () => {
     return (
         <div className="space-y-6">
             {
-                cart.map(cartItem => <CartCard cartItem={cartItem}></CartCard>)
+                cart.map(cartItem => <CartCard key={cartItem.id} cartItem={cartItem}></CartCard>)
             }
         </div>
     );

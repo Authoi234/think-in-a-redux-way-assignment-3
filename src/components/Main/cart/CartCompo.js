@@ -6,7 +6,7 @@ import CartContainer from './CartContainer';
 const CartCompo = () => {
     return (
         <div className="container 2xl:px-8 px-2 mx-auto">
-            <h2 className="mb-8 text-xl font-bold">Shopping Cart</h2>
+            <h2 className="mb-8 text-xl font-bold" style={{margin: '15px 0'}}>Shopping Cart</h2>
             <div className="cartListContainer">
                 <CartContainer></CartContainer>
 
